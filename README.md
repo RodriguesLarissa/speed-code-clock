@@ -1,1 +1,2 @@
-speed-code-clock
+## [Speed Code] clock
+This project is a simple `HTML`, `CSS` and `JavaScript` code that I've used to train my js and css vanilla skills, to test that you can see it in [GH pages](https://lucas-avelino.github.io/speed-code-clock/)
