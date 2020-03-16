@@ -17,7 +17,7 @@ const hashMapNumbers = {
         mid: false,
         bot: true,
     },
-    "1":{
+    "1": {
         leftTop: false,
         leftBot: false,
         rightTop: true,
@@ -26,7 +26,7 @@ const hashMapNumbers = {
         mid: false,
         bot: false,
     },
-    "2":{
+    "2": {
         leftTop: false,
         leftBot: true,
         rightTop: true,
@@ -35,7 +35,7 @@ const hashMapNumbers = {
         mid: true,
         bot: true,
     },
-    "3":{
+    "3": {
         leftTop: false,
         leftBot: false,
         rightTop: true,
@@ -44,7 +44,7 @@ const hashMapNumbers = {
         mid: true,
         bot: true,
     },
-    "4":{
+    "4": {
         leftTop: true,
         leftBot: false,
         rightTop: true,
@@ -53,7 +53,7 @@ const hashMapNumbers = {
         mid: true,
         bot: false,
     },
-    "5":{
+    "5": {
         leftTop: true,
         leftBot: false,
         rightTop: false,
@@ -62,7 +62,7 @@ const hashMapNumbers = {
         mid: true,
         bot: true,
     },
-    "6":{
+    "6": {
         leftTop: true,
         leftBot: true,
         rightTop: false,
@@ -71,7 +71,7 @@ const hashMapNumbers = {
         mid: true,
         bot: true,
     },
-    "7":{
+    "7": {
         leftTop: false,
         leftBot: false,
         rightTop: true,
@@ -80,7 +80,7 @@ const hashMapNumbers = {
         mid: false,
         bot: false,
     },
-    "8":{
+    "8": {
         leftTop: true,
         leftBot: true,
         rightTop: true,
@@ -89,7 +89,7 @@ const hashMapNumbers = {
         mid: true,
         bot: true,
     },
-    "9":{
+    "9": {
         leftTop: true,
         leftBot: false,
         rightTop: true,
@@ -108,23 +108,25 @@ const applyNumber = (numberId, numberToApply) => {
         if (number.hasOwnProperty(part)) {
             const partConfig = number[part];
             const partElement = numberElement.querySelector(namesOfParts[part])
-            partElement.style = `background-color: ${partConfig? '#008000': 'transparent'}` 
+            partElement.style = `background-color: ${partConfig ? '#008000' : 'transparent'}`
         }
     }
 }
 
 
-setInterval(()=>{const atualTiming = new Date()
-const timeObj = {
-    hour: atualTiming.getHours(),
-    minutes: atualTiming.getMinutes(),
-    seconds: atualTiming.getSeconds()
-}
-
-for (const key in timeObj) {
-    if (timeObj.hasOwnProperty(key)) {
-        const value = timeObj[key];
-        applyNumber(`#decimal-${key}`,(value<10?"0"+value:value.toString())[0])//decimal
-        applyNumber(`#unity-${key}`,(value<10?"0"+value:value.toString())[1])//unity
+setInterval(() => {
+    const atualTiming = new Date()
+    const timeObj = {
+        hour: atualTiming.getHours(),
+        minutes: atualTiming.getMinutes(),
+        seconds: atualTiming.getSeconds()
     }
-}}, 1000)
+
+    for (const key in timeObj) {
+        if (timeObj.hasOwnProperty(key)) {
+            const value = timeObj[key];
+            applyNumber(`#decimal-${key}`, (value < 10 ? "0" + value : value.toString())[0])//decimal
+            applyNumber(`#unity-${key}`, (value < 10 ? "0" + value : value.toString())[1])//unity
+        }
+    }
+}, 1000)

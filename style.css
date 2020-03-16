@@ -1,79 +1,76 @@
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    background-color: black;
-    margin: 0;
-    padding: 0;
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: black;
+  margin: 0;
+  padding: 0;
 }
-.canvas{
-    width: 700px;
-    height: 150px;
-    /* border: 4px solid red; */
-    padding: 10px;
-    padding-bottom: 10px;
-    display: inline-flex;
-    justify-content: center;
+.canvas {
+  width: 700px;
+  height: 150px;
+  /* border: 4px solid red; */
+  padding: 10px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  justify-content: center;
 }
-.number{
-    position: relative;
-    width: 75px;
-    height: 90%;
-    margin-bottom: 15px;
-    margin-left: 10px;
+.number {
+  position: relative;
+  width: 75px;
+  height: 90%;
+  margin-bottom: 15px;
+  margin-left: 10px;
 }
-.part{
-    background-color: #008000;
-    width: 10px;
-    height: 50px;
-    position: absolute;
-    transition: background-color 750ms;
-}
-
-.left{
-    left: 0;
-    height: 55px;
+.part {
+  background-color: #008000;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+  transition: background-color 750ms;
 }
 
-.right{
-    right: 0;
-    height: 55px;
+.left {
+  left: 0;
+  height: 55px;
 }
 
-.bottom{
-    bottom: 0;
+.right {
+  right: 0;
+  height: 55px;
 }
 
-.top{
-    top: 10px;
+.bottom {
+  bottom: 0;
 }
 
-.part.bottom:not(.left):not(.right):not(.dot){
-    transform: rotate(90deg) translate(32px, -32px);;
-}
-.part.top:not(.left):not(.right):not(.dot){
-    transform: rotate(90deg) translate(-32px,-32px);         
-}
-.part.mid{
-    transform: rotate(90deg) translate(46px,-32px);         
-}
-.number.dot{
-    width: 30px;
+.top {
+  top: 10px;
 }
 
-.dot.top{
-    top: 35%;
-    height: 10px;
-    left: 40%;
+.part.bottom:not(.left):not(.right):not(.dot) {
+  transform: rotate(90deg) translate(32px, -32px);
 }
-.dot.bottom{
-    bottom: 30%;
-    height: 10px;
-    left: 40%;
+.part.top:not(.left):not(.right):not(.dot) {
+  transform: rotate(90deg) translate(-32px, -32px);
 }
-.hide{
+.part.mid {
+  transform: rotate(90deg) translate(46px, -32px);
+}
+.number.dot {
+  width: 30px;
+}
 
+.dot.top {
+  top: 35%;
+  height: 10px;
+  left: 40%;
+}
+.dot.bottom {
+  bottom: 30%;
+  height: 10px;
+  left: 40%;
 }
